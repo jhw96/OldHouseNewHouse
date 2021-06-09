@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	
+	
+<mapper namespace="com.woong.happyhouse.model.dao.DongCodeDao">
+	<select id="selectDong" parameterType="String" resultType="DongCode">
+		select city, gugun, dong
+		from dongcode
+		where gugun = #{gugun}
+	</select>
+
+</mapper>

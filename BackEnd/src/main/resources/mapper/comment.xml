@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.woong.happyhouse.model.dao.CommentDao">
+	<select id="selectByBoard" parameterType="Integer" resultType="Comment">
+		select userid, content, regtime, boardno
+		from comment
+		where boardno = #{boardno}
+	</select>
+	
+	<insert id="writeComment" parameterType="Comment">
+		insert into comment(userid, content, boardno, regtime)
+		values(#{userid}, #{content}, #{boardno}, now())
+	</insert>
+	
+	<update id="modifyComment" parameterType="Comment">
+		update comment
+		set content=#{content}
+		where boardno = #{boardno} and userid = #{userid} and regtime = #{regtime}
+	</update>
+	
+	<delete id="deleteComment" parameterType="Comment">
+		delete from comment
+		where boardno = #{boardno} and userid = #{userid} and regtime = #{regtime}
+	</delete>
+</mapper>
