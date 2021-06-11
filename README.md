@@ -3,7 +3,7 @@
 
 # 👬 Team Member
 <br><a href="https://github.com/kimmy01" target="_blank">김나영</a>
-<br>장현웅
+<br><a href="https://github.com/jhw96" target="_blank">장현웅</a>
 
 # 🏠 헌집줄게 새집다오 Website
 ### 1. main
